@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-hono-waitlist-template",
+  "main": "src/server/index.ts",
+  "compatibility_date": "2025-09-27",
+}

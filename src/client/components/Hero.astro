@@ -1,0 +1,36 @@
+---
+import { Signup } from "../components/Signup";
+import Card from "./Card.astro";
+---
+
+<div class="hero bg-base-200 flex min-h-screen flex-col">
+  <div class="hero-content mt-10 flex flex-col text-center md:mt-20 xl:mt-30">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">JavaScript Dojo</h1>
+      <p class="text-secondary pt-6">
+        Learning JavaScript or need some practice? Join the waitlist fo my
+        interactive code kata platform.
+      </p>
+      <p class="text-secondary pt-3">Estimated Launch: Fall 2026</p>
+    </div>
+    <div class="pt-10">
+      <Signup />
+    </div>
+  </div>
+  <div
+    class="mt-10 flex flex-col gap-10 md:mt-20 md:gap-8 xl:mt-30 xl:flex-row"
+  >
+    <Card
+      title="Get Interview Ready"
+      description="Need to brush up your JavaScript skills for an interview? This fast platform will get you ready in no time."
+    />
+    <Card
+      title="Review A.I Slop Faster"
+      description="Spending too much time reading A.I generated code? This platform will teach you the ins and outs of JavaScript so you know when A.I has made a mistake."
+    />
+    <Card
+      title="Code Faster"
+      description="Build muscle memory so you can code faster, without draining your cognitive energy."
+    />
+  </div>
+</div>

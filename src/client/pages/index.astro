@@ -1,5 +1,6 @@
 ---
-import Hello from "../components/Hello.astro";
+import Hero from "../components/Hero.astro";
+import { ServerStatus } from "../components/ServerStatus";
 import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +8,6 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Hello />
+  <Hero />
+  <ServerStatus client:load />
 </Layout>
