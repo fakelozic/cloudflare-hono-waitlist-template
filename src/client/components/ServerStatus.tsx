@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import { client } from "../../lib/client";
-import type { InferResponseType } from "hono";
+import { useQuery } from "@tanstack/react-query";
 
-type HealthResponse = InferResponseType<typeof client.api.health.$get>;
+async function getHealth() {
+  const res = await client.api.health.$get();
+  return await res.json();
+}
 
 export function ServerStatus() {
-  const [healthStatus, setHealthStatus] = useState<HealthResponse | null>(null);
-  useEffect(() => {
-    const health = async () => {
-      const res = await client.api.health.$get();
-      const data = await res.json();
-      setHealthStatus(data);
-    };
-    health();
-  }, []);
+  const { data, isPending, error } = useQuery({
+    queryKey: ["status"],
+    queryFn: getHealth,
+  });
 
-  return <div>{healthStatus === null ? "..." : healthStatus.status}</div>;
+  return <div>{error ? "error" : isPending ? "..." : data.status}</div>;
 }

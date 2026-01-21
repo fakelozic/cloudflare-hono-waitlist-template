@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["bunx", "daisyui", "kata", "Signup", "waitlist"],
+  "cSpell.words": [
+    "bunx",
+    "daisyui",
+    "dryrun",
+    "kata",
+    "Signup",
+    "tanstack",
+    "waitlist"
+  ],
 
   "eslint.validate": [
     "javascript",

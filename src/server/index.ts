@@ -1,6 +1,8 @@
 import { Hono } from "hono";
-import { cors } from "hono/cors";
-const app = new Hono().get("/api/health", (c) => c.json({ status: "Healthy" }));
+import { accessAuth } from "./middlewares/auth";
+const app = new Hono()
+  .use(accessAuth)
+  .get("/api/health", (c) => c.json({ status: "Healthy" }));
 
 export default app;
 
