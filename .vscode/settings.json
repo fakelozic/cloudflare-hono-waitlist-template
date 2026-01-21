@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["bunx", "daisyui", "waitlist"]
+  "cSpell.words": ["bunx", "daisyui", "waitlist"],
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ]
 }
